@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>出勤情報｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="demo">サンプル／デモサイトです（架空の店舗・人物・出勤はサンプル表示）</div>
+<header class="top"><div class="logo">ねむりどき<small>NEMURIDOKI OSU</small></div></header>
+<nav class="main"><a href="index.html">トップ</a><a href="schedule.html" class="on">出勤情報</a><a href="system.html">料金システム</a><a href="therapist.html">セラピスト</a><a href="index.html#access">アクセス</a></nav>
+<section><h2 class="sec"><small>SCHEDULE</small>Schedule</h2>
+<div class="tabs" id="dates"></div>
+<div class="tabs"><span class="on">全員</span><span>大須</span><span style="margin-left:auto;border:none">次の週 ›</span></div>
+<div id="list"></div>
+<p class="note">出勤はサンプルデータです（デモ）。ご予約可能の表示がある時間帯で承ります。</p>
+</section>
+<footer>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00</footer>
+<div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
+<script>
+const STAFF=[
+ {n:"佐伯ゆき",ini:"佐",base:"10:00～22:00",badges:["rec"],prof:"店長 ／ 歴8年"},
+ {n:"三浦あかり",ini:"三",base:"13:00～23:00",badges:["pop"],prof:"歴5年 ／ アロマヘッド"},
+ {n:"小野ことり",ini:"小",base:"17:00～23:00",badges:["new","rec"],prof:"歴3年 ／ フット・快眠セット"},
+ {n:"高田まな",ini:"高",base:"11:00～21:00",badges:["rec"],prof:"歴6年 ／ 首・肩の集中ケア"},
+ {n:"林さくら",ini:"林",base:"12:00～20:00",badges:["new"],prof:"歴2年 ／ 初めての方の案内"},
+ {n:"中村れい",ini:"中",base:"15:00～23:00",badges:["pop"],prof:"歴7年 ／ ロングコース"}
+];
+const B={new:'<span class="bdg new">新人</span>',rec:'<span class="bdg rec">おすすめ</span>',pop:'<span class="bdg pop">人気</span>'};
+const WD=["日","月","火","水","木","金","土"];
+const start=new Date(2026,10,2);
+const dates=[...Array(14)].map((_,i)=>{const d=new Date(start);d.setDate(d.getDate()+i);return d});
+const tabs=document.getElementById("dates");
+dates.forEach((d,i)=>{const b=document.createElement("button");b.textContent=`${d.getMonth()+1}月${String(d.getDate()).padStart(2,"0")}日(${WD[d.getDay()]})`;if(i===0)b.className="on";b.onclick=()=>{[...tabs.children].forEach(c=>c.className="");b.className="on";render(i)};tabs.appendChild(b)});
+function render(di){
+ const list=STAFF.filter((s,si)=>(si+di)%4!==3).map(s=>`<div class="tcard"><div class="av">${s.ini}</div><div><h3>${s.n}</h3>${s.badges.map(b=>B[b]).join("")}<div class="tm">${s.base}</div><p>大須 ／ ${s.prof}</p><div class="st">ご予約可能</div></div></div>`).join("");
+ document.getElementById("list").innerHTML=list;
+}
+render(0);
+</script>
+</body></html>
