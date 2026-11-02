@@ -1,24 +1,29 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>セラピスト一覧｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"></head><body>
-<div class="demo">サンプル／デモサイトです（架空の店舗・人物はサンプル表示）</div>
-<header class="top"><div class="logo">ねむりどき<small>NEMURIDOKI OSU</small></div></header>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セラピスト一覧｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="demo">サンプル／デモサイトです（架空の店舗・人物・出勤はサンプル表示）</div><div id="splash"><div class="lg">ねむりどき<small>NEMURIDOKI OSU</small></div></div><header class="top"><div class="logo"><span class="g">ね</span>むりどき<small>NEMURIDOKI OSU</small></div></header>
 <nav class="main"><a href="index.html">トップ</a><a href="schedule.html">出勤情報</a><a href="system.html">料金システム</a><a href="therapist.html" class="on">セラピスト</a><a href="index.html#access">アクセス</a></nav>
-<section><h2 class="sec"><small>THERAPIST</small>Therapist</h2>
-<div id="all"></div>
-<p class="note">写真の代わりに頭文字のマークで表示しています（デモ）。得意分野は施術軸で記載しています。</p>
+<div class="banner"><img src="img/treatment.jpg"><div class="veil"></div><div class="lg">ねむりどき</div></div>
+<section><h2 class="sec"><span class="en">Therapist</span><span class="ja">セラピスト一覧</span></h2>
+<div class="filter">
+<div>絞り込み：<label><input type="checkbox" id="f-new"> 新人</label><label><input type="checkbox" id="f-rec"> おすすめ</label><label><input type="checkbox" id="f-pop"> 人気</label></div>
+<div class="row"><button id="f-go">検索</button><button class="reset" id="f-reset">リセット</button></div>
+</div>
+<div class="grid" id="all"></div>
+<p class="note">得意分野は施術軸で記載しています（デモ）。</p>
 </section>
-<footer>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00</footer>
+<footer><div class="fl">ねむりどき</div>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00<br>このサイトは販売デモです。実在の店舗・人物とは関係ありません。</footer>
 <div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
+<script src="staff.js"></script>
 <script>
-const STAFF=[
- {n:"佐伯ゆき",ini:"佐",tm:"大須 10:00～22:00",ok:true,badges:["rec"],prof:"店長 ／ 歴8年。ドライヘッド全般、眼精疲労ケア。側頭部の張りをほどく圧の対話が得意です。"},
- {n:"三浦あかり",ini:"三",tm:"大須 13:00～23:00",ok:true,badges:["pop"],prof:"歴5年。アロマヘッド担当。香りの選び方から眠りの入り方まで案内します。"},
- {n:"小野ことり",ini:"小",tm:"大須 17:00～23:00",ok:true,badges:["new","rec"],prof:"歴3年。フットと快眠セット。短時間でも頭の軽さを。（新人）"},
- {n:"高田まな",ini:"高",tm:"-----",ok:false,badges:["rec"],prof:"歴6年。首・肩・デコルテの集中ケア。"},
- {n:"林さくら",ini:"林",tm:"-----",ok:false,badges:["new"],prof:"歴2年。初めての方のカウンセリング担当。（新人）"},
- {n:"中村れい",ini:"中",tm:"-----",ok:false,badges:["pop"],prof:"歴7年。ロングコースの眠りの深さに定評。"}
-];
-const B={new:'<span class="bdg new">新人</span>',rec:'<span class="bdg rec">おすすめ</span>',pop:'<span class="bdg pop">人気</span>'};
-document.getElementById("all").innerHTML=STAFF.map(s=>`<div class="tcard"><div class="av">${s.ini}</div><div><h3>${s.n}</h3>${s.badges.map(b=>B[b]).join("")}<div class="tm">${s.tm}</div>${s.ok?'<div class="st">本日 ご予約可能</div>':""}<p>${s.prof}</p></div></div>`).join("");
+const all=document.getElementById("all");
+function draw(list){all.innerHTML=list.map(s=>cardHTML(s,true)).join("")}
+draw(STAFF);
+document.getElementById("f-go").onclick=()=>{
+ const want=[];
+ if(document.getElementById("f-new").checked)want.push("新人");
+ if(document.getElementById("f-rec").checked)want.push("おすすめ");
+ if(document.getElementById("f-pop").checked)want.push("人気");
+ draw(want.length?STAFF.filter(s=>want.some(w=>s.badges.includes(w))):STAFF);
+};
+document.getElementById("f-reset").onclick=()=>{["f-new","f-rec","f-pop"].forEach(id=>document.getElementById(id).checked=false);draw(STAFF)};
 </script>
 </body></html>
