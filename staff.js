@@ -12,7 +12,7 @@ const STAFF=[
  },
  {
   "n": "三浦あかり",
-  "img": "img/staff-miura.jpg",
+  "img": "img/uni-01.jpg",
   "base": "13:00～23:00",
   "today": true,
   "badges": [
@@ -23,7 +23,7 @@ const STAFF=[
  },
  {
   "n": "小野ことり",
-  "img": "img/staff-ono.jpg",
+  "img": "img/uni-02.jpg",
   "base": "17:00～23:00",
   "today": true,
   "badges": [
@@ -35,7 +35,7 @@ const STAFF=[
  },
  {
   "n": "高田まな",
-  "img": "img/staff-takada.jpg",
+  "img": "img/uni-03.jpg",
   "base": "11:00～21:00",
   "today": false,
   "badges": [
@@ -57,7 +57,7 @@ const STAFF=[
  },
  {
   "n": "中村れい",
-  "img": "img/staff-nakamura.jpg",
+  "img": "img/uni-05.jpg",
   "base": "15:00～23:00",
   "today": false,
   "badges": [
@@ -68,7 +68,7 @@ const STAFF=[
  },
  {
   "n": "相川みお",
-  "img": "img/pool-01.jpg",
+  "img": "img/uni-06.jpg",
   "base": "10:00～20:00",
   "today": true,
   "badges": [],
@@ -77,7 +77,7 @@ const STAFF=[
  },
  {
   "n": "石田ゆり",
-  "img": "img/pool-02.jpg",
+  "img": "img/uni-07.jpg",
   "base": "11:00～21:00",
   "today": true,
   "badges": [
@@ -88,7 +88,7 @@ const STAFF=[
  },
  {
   "n": "井上かな",
-  "img": "img/pool-03.jpg",
+  "img": "img/uni-08.jpg",
   "base": "12:00～22:00",
   "today": false,
   "badges": [
@@ -99,7 +99,7 @@ const STAFF=[
  },
  {
   "n": "宇田あや",
-  "img": "img/pool-04.jpg",
+  "img": "img/uni-09.jpg",
   "base": "13:00～23:00",
   "today": false,
   "badges": [
@@ -110,7 +110,7 @@ const STAFF=[
  },
  {
   "n": "江口まい",
-  "img": "img/pool-05.jpg",
+  "img": "img/uni-10.jpg",
   "base": "10:00～18:00",
   "today": false,
   "badges": [
@@ -122,7 +122,7 @@ const STAFF=[
  },
  {
   "n": "太田るな",
-  "img": "img/pool-06.jpg",
+  "img": "img/uni-11.jpg",
   "base": "15:00～23:00",
   "today": false,
   "badges": [],
@@ -131,7 +131,7 @@ const STAFF=[
  },
  {
   "n": "岡田せり",
-  "img": "img/pool-07.jpg",
+  "img": "img/uni-12.jpg",
   "base": "12:00～20:00",
   "today": true,
   "badges": [
@@ -142,7 +142,7 @@ const STAFF=[
  },
  {
   "n": "加藤もも",
-  "img": "img/pool-08.jpg",
+  "img": "img/uni-13.jpg",
   "base": "14:00～23:00",
   "today": false,
   "badges": [],
@@ -151,7 +151,7 @@ const STAFF=[
  },
  {
   "n": "北川りお",
-  "img": "img/pool-09.jpg",
+  "img": "img/uni-14.jpg",
   "base": "11:00～19:00",
   "today": false,
   "badges": [
@@ -162,7 +162,7 @@ const STAFF=[
  },
  {
   "n": "工藤あい",
-  "img": "img/pool-10.jpg",
+  "img": "img/uni-15.jpg",
   "base": "16:00～23:00",
   "today": false,
   "badges": [
@@ -173,7 +173,7 @@ const STAFF=[
  },
  {
   "n": "近藤すず",
-  "img": "img/pool-11.jpg",
+  "img": "img/uni-16.jpg",
   "base": "10:00～20:00",
   "today": true,
   "badges": [],
@@ -182,7 +182,7 @@ const STAFF=[
  },
  {
   "n": "坂本はな",
-  "img": "img/pool-12.jpg",
+  "img": "img/uni-17.jpg",
   "base": "11:00～21:00",
   "today": false,
   "badges": [
@@ -193,7 +193,7 @@ const STAFF=[
  },
  {
   "n": "島田ゆめ",
-  "img": "img/pool-13.jpg",
+  "img": "img/uni-18.jpg",
   "base": "12:00～22:00",
   "today": true,
   "badges": [
@@ -204,7 +204,7 @@ const STAFF=[
  },
  {
   "n": "杉本あき",
-  "img": "img/pool-14.jpg",
+  "img": "img/uni-19.jpg",
   "base": "13:00～23:00",
   "today": false,
   "badges": [
@@ -215,7 +215,7 @@ const STAFF=[
  },
  {
   "n": "瀬戸なな",
-  "img": "img/pool-15.jpg",
+  "img": "img/uni-20.jpg",
   "base": "10:00～18:00",
   "today": false,
   "badges": [
@@ -227,7 +227,7 @@ const STAFF=[
  },
  {
   "n": "高橋こと",
-  "img": "img/pool-16.jpg",
+  "img": "img/uni-21.jpg",
   "base": "15:00～23:00",
   "today": true,
   "badges": [],
@@ -236,7 +236,7 @@ const STAFF=[
  },
  {
   "n": "田村みく",
-  "img": "img/pool-17.jpg",
+  "img": "img/uni-22.jpg",
   "base": "12:00～20:00",
   "today": false,
   "badges": [
@@ -247,7 +247,7 @@ const STAFF=[
  },
  {
   "n": "千葉れな",
-  "img": "img/pool-18.jpg",
+  "img": "img/uni-23.jpg",
   "base": "14:00～23:00",
   "today": true,
   "badges": [],
@@ -256,7 +256,7 @@ const STAFF=[
  },
  {
   "n": "辻そら",
-  "img": "img/pool-19.jpg",
+  "img": "img/uni-24.jpg",
   "base": "11:00～19:00",
   "today": false,
   "badges": [
@@ -267,7 +267,7 @@ const STAFF=[
  },
  {
   "n": "寺田ひな",
-  "img": "img/pool-20.jpg",
+  "img": "img/uni-25.jpg",
   "base": "16:00～23:00",
   "today": true,
   "badges": [
@@ -278,7 +278,7 @@ const STAFF=[
  },
  {
   "n": "中島ゆう",
-  "img": "img/pool-21.jpg",
+  "img": "img/uni-26.jpg",
   "base": "10:00～20:00",
   "today": false,
   "badges": [],
@@ -287,7 +287,7 @@ const STAFF=[
  },
  {
   "n": "永井かりん",
-  "img": "img/pool-22.jpg",
+  "img": "img/uni-27.jpg",
   "base": "11:00～21:00",
   "today": true,
   "badges": [
@@ -298,7 +298,7 @@ const STAFF=[
  },
  {
   "n": "西村とわ",
-  "img": "img/pool-23.jpg",
+  "img": "img/uni-28.jpg",
   "base": "12:00～22:00",
   "today": false,
   "badges": [
@@ -309,7 +309,7 @@ const STAFF=[
  },
  {
   "n": "野口ましろ",
-  "img": "img/pool-24.jpg",
+  "img": "img/uni-29.jpg",
   "base": "13:00～23:00",
   "today": false,
   "badges": [
