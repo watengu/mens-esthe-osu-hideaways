@@ -1,5 +1,5 @@
 const STAFF=[
- {n:"佐伯ゆき",img:"img/staff-saeki.jpg",tm:"10:00～22:00",base:"10:00～22:00",ok:true,badges:["おすすめ"],prof:"店長 ／ 歴8年。ドライヘッド全般と眼精疲労ケア。"},
+ {n:"佐伯ゆき",img:"img/staff-saeki-v2.jpg",tm:"10:00～22:00",base:"10:00～22:00",ok:true,badges:["おすすめ"],prof:"店長 ／ 歴8年。ドライヘッド全般と眼精疲労ケア。"},
  {n:"三浦あかり",img:"img/staff-miura.jpg",tm:"13:00～23:00",base:"13:00～23:00",ok:true,badges:["人気"],prof:"歴5年。アロマヘッドと香りの相談。"},
  {n:"小野ことり",img:"img/staff-ono.jpg",tm:"17:00～23:00",base:"17:00～23:00",ok:true,badges:["新人","おすすめ"],prof:"歴3年。フットと快眠セット。"},
  {n:"高田まな",img:"img/staff-takada.jpg",tm:"-----",base:"11:00～21:00",ok:false,badges:["おすすめ"],prof:"歴6年。首・肩の集中ケア。"},
