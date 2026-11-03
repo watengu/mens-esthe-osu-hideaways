@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セラピスト紹介｜大須のメンズエステ【ねむりどき 大須店】（デモ）</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></head><body>
+<div class="demo">サンプル／デモサイトです（架空の店舗・人物はサンプル表示）</div><div id="splash"><div class="lg">ねむりどき<small>NEMURIDOKI OSU</small></div></div><header class="top"><div class="logo"><span class="g">ね</span>むりどき<small>NEMURIDOKI OSU</small></div></header>
+<nav class="main"><a href="index.html">トップ</a><a href="schedule.html">出勤情報</a><a href="system.html">料金システム</a><a href="therapist.html" class="on">セラピスト</a><a href="access.html">アクセス</a><a href="topics.html">トピックス</a><a href="faq.html">FAQ</a></nav>
+<div class="prof-hero"><img id="p-img" src="" alt=""></div>
+<div class="prof-body">
+<div class="nm" id="p-name"></div>
+<div class="row" id="p-badges"></div>
+<div class="row">🕐 本日の出勤：<span id="p-today"></span></div>
+<div class="row">基本シフト：<span id="p-base"></span>（大須）</div>
+<div class="pf" id="p-prof"></div>
+<a class="backlink" href="therapist.html">‹ セラピスト一覧へ戻る</a>
+</div>
+
+<footer><div class="fl">ねむりどき</div>ねむりどき 大須店（架空）<br>052-XXX-XXXX（サンプル）<br>OPEN：10:00～23:00<br>このサイトは販売デモです。実在の店舗・人物とは関係ありません。</footer>
+<div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
+<script src="staff.js"></script>
+<script>
+const id = parseInt(new URLSearchParams(location.search).get("id") || "0", 10);
+const s = STAFF[Math.min(Math.max(id,0), STAFF.length-1)];
+document.getElementById("p-img").src = s.img;
+document.getElementById("p-name").textContent = s.n;
+document.getElementById("p-badges").innerHTML = s.badges.map(b=>`<span style="background:#EC407A;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;margin-right:4px">${b}</span>`).join("");
+document.getElementById("p-today").textContent = s.today ? s.base + "（ご予約可能）" : "----- （本日はお休み）";
+document.getElementById("p-base").textContent = s.base;
+document.getElementById("p-prof").textContent = s.prof + "大須の個室で、静かな時間をお渡しします。ご予約はお電話またはLINE（デモ）からどうぞ。";
+document.title = s.n + "｜セラピスト【ねむりどき 大須店】（デモ）";
+</script>
+</body></html>

@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大須のメンズエステ【ねむりどき 大須店】完全個室で極上の癒し体験（デモ）</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大須のメンズエステ【ねむりどき 大須店】完全個室で極上の癒し体験（デモ）</title><link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"></head><body>
 <div class="demo">サンプル／デモサイトです（架空の店舗・人物・料金はサンプル表示）</div><div id="splash"><div class="lg">ねむりどき<small>NEMURIDOKI OSU</small></div></div><header class="top"><div class="logo"><span class="g">ね</span>むりどき<small>NEMURIDOKI OSU</small></div></header>
-<nav class="main"><a href="index.html" class="on">トップ</a><a href="schedule.html" >出勤情報</a><a href="system.html" >料金システム</a><a href="therapist.html" >セラピスト</a><a href="index.html#access" >アクセス</a></nav>
+<nav class="main"><a href="index.html" class="on">トップ</a><a href="schedule.html">出勤情報</a><a href="system.html">料金システム</a><a href="therapist.html">セラピスト</a><a href="access.html">アクセス</a><a href="topics.html">トピックス</a><a href="faq.html">FAQ</a></nav>
 <div class="fv"><img src="img/hero.jpg"><div class="veil"></div><div class="lg"><div class="mark">ね</div><div class="nm">ねむりどき</div><div class="en">NEMURIDOKI OSU</div><div class="rule"></div></div></div>
 <section><h2 class="sec"><span class="en">News</span><span class="ja">お知らせ</span></h2>
 <div class="slider"><img src="img/interior.jpg"><img src="img/treatment.jpg"><img src="img/aroma.jpg"></div></section>
@@ -45,8 +45,8 @@
 <div class="bar"><a href="tel:0520000000">電話予約</a><a class="line" href="#">LINEで予約（デモ）</a><span class="open">OPEN 10:00～23:00</span></div>
 <script src="staff.js"></script>
 <script>
-document.getElementById("pickup").innerHTML=[STAFF[0],STAFF[1],STAFF[5]].map(s=>cardHTML(s)).join("");
+document.getElementById("pickup").innerHTML=STAFF.filter(s=>s.pickup).map(s=>cardHTML(s)).join("");
 document.getElementById("today").innerHTML=STAFF.filter(s=>s.ok).map(s=>cardHTML(s)).join("");
-document.getElementById("therapists").innerHTML=STAFF.slice(0,4).map(s=>cardHTML(s)).join("");
+document.getElementById("therapists").innerHTML=STAFF.slice(0,12).map(s=>cardHTML(s)).join("");
 </script>
 </body></html>
